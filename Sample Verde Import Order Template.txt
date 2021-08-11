@@ -1,0 +1,9 @@
+PPE1569		Best Rate	BR02	Sender							8593 blue sage ln		BROWNSVILLE	TX	78520	US	(956) 620-6983						elite-play-mat	1
+PPE1570		Best Rate	BR02	Sender							11811 Pelican Pass		San Antonio	TX	78221	US	(432) 413-7747						elite-play-mat	1
+PPE1572		Best Rate	BR02	Sender							3426 Sagecrest Dr		Hudsonville	MI	49426	US	(989) 430-6935						elite-play-mat	1
+PPE1573		Best Rate	BR02	Sender							697 Cardinal Point		Greenup	KY	41144	US	(606) 240-8159						elite-play-mat	1
+PPE1574		Best Rate	BR02	Sender							674 Burkhalter Rd SE 		Silver Creek 	GA	30173	US	(319) 329-1380						elite-play-mat	1
+PPE1576		Best Rate	BR02	Sender							24 Pheasant Hollow		Pittsford	NY	14534	US	(585) 489-7605						elite-play-mat	1
+PPE1577		Best Rate	BR02	Sender							525 51st Street		West Des Moines	IA	50265	US	(515) 240-3444						elite-play-mat	1
+PPE1578		Best Rate	BR02	Sender							1071 Dougal Court		Great Falls	VA	22066	US	(917) 584-1531						elite-play-mat	1
+PPE1580		Best Rate	BR02	Sender							19 Jefferson Street		Little Ferry	NJ	07643	US	(856) 685-4698						elite-play-mat	1
