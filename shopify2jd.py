@@ -177,12 +177,13 @@ def shop2jd(shop_pd,jd_pd, only_sku_of, outfile):
         curr_row_dict['*Consignee Address1'] = row['Shipping Address1']
         curr_row_dict['Consignee Address2'] = row['Shipping Address2']
         #curr_row_dict['ShipToEmail'] = row['Email']
-        curr_row_dict['*Consignee Name'] = row['Shipping Name']
+        curr_row_dict['*Consignee Name'] = row['Shipping Name'].lstrip().rstrip()
         #county needed?
-        curr_row_dict['*Consignee City'] = row['Shipping City']
-        curr_row_dict['*Consignee State/Province'] = row['Shipping Province']
+        curr_row_dict['*Consignee City'] = row['Shipping City'].lstrip().rstrip()
+        curr_row_dict['*Consignee State/Province'] = row['Shipping Province'].lstrip().rstrip()
         curr_row_dict['*Consignee Postcode'] = row['Shipping Zip']
-        curr_row_dict['*Consignee Country'] = row['Shipping Country']
+        curr_row_dict['*Consignee Country'] = row['Shipping Country'].lstrip().rstrip()
+        curr_row_dict['*Consignee District/County'] = "US"
         curr_row_dict['*Price'] = 1 # just a constant
         curr_row_dict['*Outbound Unit\n1-piece；2-Box；3-Pallet'] = 1 # Always 1 since we're b2c.
 
@@ -192,6 +193,8 @@ def shop2jd(shop_pd,jd_pd, only_sku_of, outfile):
             phone = phone[1:]
         curr_row_dict['*Mobile'] = phone
         curr_row_dict['*Quantity'] = row['Lineitem quantity']
+        if len(phone) <10 or len(phone)>11:
+            print("MAKE SURE PHONE NUMBER FOR ORDER: " + row['Name'] + " is correct! It has " + str(len(phone)) + " digits!")
 
         # various warning checks for orders
         if (row['Risk Level']!="Low"):

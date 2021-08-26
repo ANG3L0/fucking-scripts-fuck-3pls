@@ -47,6 +47,7 @@ def download_verde_template(verde_xlsx_fname):
         output.close()
 
 def shop2verde(shop_pd,verde_pd, only_sku_of, outfile):
+    shop_pd['Shipping Zip']=shop_pd['Shipping Zip'].astype(str).str.zfill(5)
     for idx, row in shop_pd.iterrows():
         if (row['Financial Status']!="paid"):
             # not paid yet / cancelled / refunded, so we're not gonna order anything for them.
@@ -90,7 +91,7 @@ def shop2verde(shop_pd,verde_pd, only_sku_of, outfile):
         curr_row_dict['ShipToState'] = row['Shipping Province']
         curr_row_dict['ShipToZip'] = row['Shipping Zip']
         curr_row_dict['ShipToCountry'] = row['Shipping Country']
-        phone = row['Shipping Phone']
+        phone = str(row['Shipping Phone'])
         phone = phone.replace("(","").replace(")","").replace(" ","").replace("-","")
         if len(phone) == 11:
             phone = phone[1:]
